@@ -3,8 +3,16 @@ body {
 }
 
 
+.task-two__list-elements {
+    cursor: pointer;
+}
+
 .red {
     color: red;
+}
+
+.task-three__button {
+    cursor: pointer;
 }
 
 #title-group {
@@ -12,9 +20,51 @@ body {
     display: flex;
     align-items: center;
     gap: 5px;
+    width: fit-content;
 }
 
 
 .hide {
     display: none;
+}
+
+.task-five__messages-group {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.task-five__group {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.task-five__title {
+    margin: 0;
+    padding-bottom: .3em;
+    font-size: 1.1em;
+}
+
+.task-five__text {
+    margin: 0;
+    padding: 0 0 .5em;
+}
+
+.pane {
+    background: #edf5e1;
+    padding: 10px 20px 10px;
+    border-top: solid 2px #c4df9b;
+    width: 50%;
+}
+
+.remove-button {
+    font-size: 110%;
+    color: darkred;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
 }

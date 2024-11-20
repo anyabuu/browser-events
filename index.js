@@ -10,7 +10,7 @@ function elementsColor(elements){
     elements.forEach(function(el, index){
         setTimeout(function(){
             el.style.color = 'red'
-        }, index * 2000) // задаем каждому элементу свою задержку
+        }, index * 1000) // задаем каждому элементу свою задержку
     })
 
 }
@@ -35,12 +35,12 @@ let intervalId = setInterval(function(){
         clearInterval(intervalId)
     }
 
-}, 2000)
+}, 1000)
 
 
 
 // Task2
-// окрашивание элементов списка в цвет
+// окрашивание элементов списка в цвет по нажатию
 
 let listElements = document.querySelectorAll('li');
 
@@ -85,3 +85,17 @@ function show(){
     arrLeft.classList.toggle('hide')
     arrDown.classList.toggle('hide')
 }
+
+//Task5
+//удаление сообщений по нажатию кнопки
+
+let removeButtons = document.getElementsByClassName('remove-button');
+
+Array.from(removeButtons).forEach(function(button){
+
+    button.addEventListener('click', function(event){
+        event.target.closest('.pane').classList.add('hide')
+    })
+
+})
+
