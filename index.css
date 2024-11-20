@@ -1,0 +1,20 @@
+body {
+    background-color: pink;
+}
+
+
+.red {
+    color: red;
+}
+
+#title-group {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.hide {
+    display: none;
+}
