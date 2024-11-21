@@ -20,7 +20,7 @@ elementsColor(elements)
 //вариант 2
 
 
-let elements2 = document.querySelectorAll(".task-one h1");
+let elements2 = document.querySelectorAll(".task-one h2");
 
 let index = 0
 
@@ -99,3 +99,22 @@ Array.from(removeButtons).forEach(function(button){
 
 })
 
+
+//Task6
+// перемещение мяча по полю по щелчку
+
+let ball = document.getElementById('ball');
+let field = document.getElementById('field');
+
+
+
+field.addEventListener('click',function (event) {
+
+    let containerRect = field.getBoundingClientRect();
+
+    let x = event.clientX - containerRect.left - field.clientLeft - ball.offsetWidth/2;
+    let y = event.clientY - containerRect.top - field.clientTop - ball.offsetHeight/2;
+
+    ball.style.left = `${x}px`
+    ball.style.top = `${y}px`
+})
